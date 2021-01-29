@@ -110,7 +110,7 @@ namespace Lab1
         {
             Stopwatch sec = new Stopwatch();
             sec.Start();
-            var s = from element in words orderby element.ToString() select element;
+            var s = from el in words orderby el.ToString() select el;
             foreach (var i in s)
             sec.Stop();
             TimeSpan time = sec.Elapsed;
@@ -140,7 +140,7 @@ namespace Lab1
         {
             var t = words.Count();
             t = 0;
-            var s = from words in words where words.StartsWith("j") select words;
+            var s = from el in words where el.StartsWith("j") select el;
             foreach (var i in s)
             {
                 t++;
@@ -152,7 +152,7 @@ namespace Lab1
         {
             var t = words.Count();
             t = 0;
-            var s = from words in words where words.EndsWith("d") select words;
+            var s = from el in words where el.EndsWith("d") select el;
             foreach (var i in s)
             {
                 t++;
@@ -164,7 +164,7 @@ namespace Lab1
         {
             var t = words.Count();
             t = 0;
-            var s = from words in words where words.Length > 4 select words;
+            var s = from el in words where el.Length > 4 select el;
             foreach (var i in s)
             {
                 t++;
@@ -176,7 +176,7 @@ namespace Lab1
         {
             var t = words.Count();
             t = 0;
-            var s = from words in words where words.StartsWith("a") && words.Length < 3 select words;
+            var s = from el in words where el.StartsWith("a") && el.Length < 3 select el;
             foreach (var i in s)
             {
                 t++;
